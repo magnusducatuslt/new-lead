@@ -38,5 +38,8 @@ export class Results extends Model<Results> {
   questions: any;
 
   @Column
-  isPass: boolean;
+  passed: boolean;
+
+  @Column
+  passDate: string;
 }

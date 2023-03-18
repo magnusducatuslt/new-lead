@@ -12,7 +12,14 @@ export class ResultController {
 
   @Post()
   addResult(
-    @Body() param: { userId: string; contentId: string; questions: any }
+    @Body()
+    param: {
+      passed: boolean;
+      passDate: string;
+      userId: number;
+      contentId: number;
+      questions: any;
+    }
   ): Promise<Results> {
     return this.resultService.addResult(
       Object.assign(param, {

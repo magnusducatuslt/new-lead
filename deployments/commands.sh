@@ -1,0 +1,1 @@
+ngrok http --tlsCrt=/Users/magnusducatuslt/backend/new-lead/deployments/ssl/cert.pem --tlsKey=/Users/magnusducatuslt/backend/new-lead/deployments/ssl/key.pem 80

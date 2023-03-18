@@ -19,4 +19,9 @@ export class AuthController {
   ): Promise<User> {
     return this.appService.getUser(body);
   }
+
+  @Get("/")
+  getHealth() {
+    return "hello";
+  }
 }

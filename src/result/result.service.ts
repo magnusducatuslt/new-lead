@@ -9,7 +9,13 @@ export class ResultService {
       include: [{ model: Results, include: [{ model: User }] }],
     });
   }
-  addResult(param: { userId: number; contentId: number; questions: any }) {
+  addResult(param: {
+    passed: boolean;
+    passDate: string;
+    userId: number;
+    contentId: number;
+    questions: any;
+  }) {
     return Results.create(
       {
         userId: param.userId,
@@ -17,7 +23,8 @@ export class ResultService {
 
         questions: param.questions,
 
-        isPass: true,
+        passed: param.passed,
+        passDate: param.passDate,
       },
       { returning: true }
     );
